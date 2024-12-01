@@ -2,7 +2,6 @@ package utils;
 
 import javax.mail.*;
 import javax.mail.internet.*;
-import io.github.cdimascio.dotenv.Dotenv;
 
 import java.io.File;
 import java.io.IOException;

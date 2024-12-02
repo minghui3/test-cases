@@ -16,23 +16,50 @@ public class PushTestResult {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             String[] browsers = { "chrome", "edge", "firefox" };
+
             for (String browser : browsers) {
-                File rawJSON = new File("/target/cucumber-reports/" + browser + "-report.json");
+                File rawJSON = new File("target/cucumber-reports/" + browser + "-report.json");
+                
+                // Check if file exists and is not empty
+                if (!rawJSON.exists() || rawJSON.length() == 0) {
+                    System.out.println(rawJSON.getAbsolutePath());
+                    continue;
+                }
+                
                 JsonNode jsonNode = objectMapper.readTree(rawJSON);
-                ObjectNode objectNode = (ObjectNode) jsonNode;
-                objectNode.put("dbName", "PulsePointHR");
-                objectNode.put("browser", browser);
-                String jsonString = objectMapper.writeValueAsString(objectNode);
+                
+                ObjectNode root;
+                
+                // add test report to root
+                if (jsonNode.isObject()) {
+                    root = (ObjectNode) jsonNode;
+                } else if (jsonNode.isArray()) {
+                    root = objectMapper.createObjectNode();
+                    root.set("result", jsonNode);
+                } else {
+                    throw new IllegalArgumentException("Root JSON object in " + "target/cucumber-reports/" + browser + "-report.json" + "is not array or object");
+                }
+
+                // add additional info
+                root.put("dbName", "PulsePointHR");
+                root.put("browser", browser);
+
+                String jsonString = objectMapper.writeValueAsString(root);
+
+                // build and send http request
                 HttpClient client = HttpClient.newHttpClient();
                 HttpRequest request = HttpRequest.newBuilder()
-                        .uri(URI.create("http://localhost:5000"))
+                        .uri(URI.create("http://localhost:5000/api/add-test-results"))
                         .header("Content-Type", "application/json")
                         .POST(HttpRequest.BodyPublishers.ofString(jsonString))
                         .build();
+
+                // handle response
                 HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
                 System.out.println(response.body());
             }
         } catch (Exception ex) {
+            System.out.println("MUSTARDDDDDDDDDDDDDDDDDDDDDDDDDD");
             ex.printStackTrace();
         }
     }

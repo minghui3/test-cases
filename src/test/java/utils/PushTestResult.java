@@ -18,7 +18,7 @@ public class PushTestResult {
             String[] browsers = { "chrome", "edge", "firefox" };
 
             for (String browser : browsers) {
-                File rawJSON = new File("target/cucumber-reports/" + browser + "-report.json");
+                File rawJSON = new File("target/cucumber-reports/" + browser + "/" + browser + "-report.json");
                 
                 // Check if file exists and is not empty
                 if (!rawJSON.exists() || rawJSON.length() == 0) {
@@ -49,7 +49,7 @@ public class PushTestResult {
                 // build and send http request
                 HttpClient client = HttpClient.newHttpClient();
                 HttpRequest request = HttpRequest.newBuilder()
-                        .uri(URI.create("http://localhost:5000/api/add-test-results"))
+                        .uri(URI.create("https://metal-bugs-kiss.loca.lt/api/add-test-results"))
                         .header("Content-Type", "application/json")
                         .POST(HttpRequest.BodyPublishers.ofString(jsonString))
                         .build();

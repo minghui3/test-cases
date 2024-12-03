@@ -41,7 +41,7 @@ public class PushTestResult {
                 }
 
                 // add additional info
-                root.put("dbName", "PulsePointHR");
+                root.put("dbName", "PointPulseHR");
                 root.put("browser", browser);
 
                 String jsonString = objectMapper.writeValueAsString(root);

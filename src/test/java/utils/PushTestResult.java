@@ -49,7 +49,7 @@ public class PushTestResult {
                 // build and send http request
                 HttpClient client = HttpClient.newHttpClient();
                 HttpRequest request = HttpRequest.newBuilder()
-                        .uri(URI.create("https://97b4-2406-3003-2006-4502-d1f9-14be-90f9-21a8.ngrok-free.app/api/add-test-results"))
+                        .uri(URI.create("https://6730-122-11-245-136.ngrok-free.app/api/add-test-results"))
                         .header("Content-Type", "application/json")
                         .POST(HttpRequest.BodyPublishers.ofString(jsonString))
                         .build();

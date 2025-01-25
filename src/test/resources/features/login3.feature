@@ -1,6 +1,6 @@
 Feature: Employee Login
 
-    @c55ed0ba-d549-4c4f-9727-1e01930787a2
+    @7c1305b6-bf1c-4d44-bcda-ee15188cf84a
     @banana
     Scenario: Successful login attempt
         Given I am on the login page     
@@ -9,7 +9,7 @@ Feature: Employee Login
         When I click on the login button     
         Then I see the alert "Login successful"
 
-    @f312c3b8-dfd9-41bc-84e8-8cd9cc82711f
+    @bb608747-c295-4bab-b5df-fc15fa7c2d0a
     Scenario: Successful login attempt
         Given I am on the login page     
         And I fill in the email as "superman@dailyplanet.com"     
@@ -17,7 +17,7 @@ Feature: Employee Login
         When I click on the login button     
         Then I see the alert "asdasdasd"
 
-    @97ae37ad-503b-4198-adf0-56e1758d4ac3
+    @9598b890-8dd5-451e-8391-9b198a588117
     Scenario: Unsuccessful login attempt
         Given I am on the login page     
         And I fill in the email as "superman@as.com"     

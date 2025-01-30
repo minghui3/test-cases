@@ -77,8 +77,8 @@
             <artifactId>maven-surefire-plugin</artifactId>
             <version>3.0.0</version>
             <configuration>
-                <parallel>classes</parallel>
-                <threadCount>3</threadCount> <!-- Adjust the number of parallel threads -->
+                <parallel>both</parallel>
+                <threadCount>2</threadCount> <!-- Adjust the number of parallel threads -->
             </configuration>
         </plugin>
 
@@ -100,7 +100,6 @@
                 <classpathScope>test</classpathScope>
             </configuration>
         </plugin>
-    </plugin>
     </plugins>
 </build>
 

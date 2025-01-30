@@ -121,7 +121,6 @@
                     <strict>true</strict>
                     <monochrome>true</monochrome>
                     <useTestNG>false</useTestNG>
-                    <junitVersion>5</junitVersion>
                 </configuration>
             </execution>
         </executions>

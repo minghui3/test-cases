@@ -18,7 +18,7 @@ spec:
           env:
             - name: SE_EVENT_BUS_HOST
               value: "selenium-hub"
-            - name: SE_EVENT_BUS_PUBLISH_PORT
+            - name: SE_EVENT_BUS_SUBSCRIBE_PORT
               value: "4442"
             - name: SE_EVENT_BUS_PORT
               value: "4444"

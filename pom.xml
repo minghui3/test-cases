@@ -114,7 +114,6 @@
                 </goals>
                 <configuration>
                     <featuresDirectory>src/test/resources/features</featuresDirectory>
-                    <glue>stepdefinitions</glue>
                     <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
                     <cucumberOutputDir>target/cucumber-reports</cucumberOutputDir>
                     <format>json</format>

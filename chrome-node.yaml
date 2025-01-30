@@ -20,6 +20,8 @@ spec:
               value: "selenium-hub"
             - name: SE_EVENT_BUS_SUBSCRIBE_PORT
               value: "4442"
+            - name: SE_EVENT_BUS_PUBLISH_PORT  # Add this to set the publish port
+              value: "4443"  # Set an unused port for the node to publish to
             - name: SE_EVENT_BUS_PORT
               value: "4444"
             - name: NODE_MAX_INSTANCES

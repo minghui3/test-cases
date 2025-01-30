@@ -121,9 +121,7 @@
                     <strict>true</strict>
                     <monochrome>true</monochrome>
                     <useTestNG>false</useTestNG>
-                    <cucumberOptions>
-                      <plugin>io.cucumber.junit.Cucumber</plugin>
-                    </cucumberOptions>
+                    <junitVersion>5</junitVersion>
                 </configuration>
             </execution>
         </executions>

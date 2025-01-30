@@ -33,8 +33,8 @@ spec:
             - name: GRID_MAX_SESSION
               value: "10"  # Set the maximum number of parallel sessions here
             - name: SE_EVENT_BUS_SUBSCRIBE_PORT
-              value: "4442"
-            - name: SE_EVENT_BUS_PUBLISH_PORT
               value: "4443"
+            - name: SE_EVENT_BUS_PUBLISH_PORT
+              value: "4442"
             - name: SE_EVENT_BUS_PORT
               value: "4444"

@@ -100,30 +100,6 @@
                 <classpathScope>test</classpathScope>
             </configuration>
         </plugin>
-
-        <!-- Add the Cucumber Parallel Plugin here -->
-         <plugin>
-        <groupId>com.github.temyers</groupId>
-        <artifactId>cucumber-jvm-parallel-plugin</artifactId>
-        <version>5.0.0</version>
-        <executions>
-            <execution>
-                <id>generateRunners</id>
-                <goals>
-                    <goal>generateRunners</goal>
-                </goals>
-                <configuration>
-                    <featuresDirectory>src/test/resources/features</featuresDirectory>
-                    <glue>stepdefinitions</glue>
-                    <outputDirectory>target/generated-test-sources/cucumber</outputDirectory>
-                    <cucumberOutputDir>target/cucumber-reports</cucumberOutputDir>
-                    <format>json</format>
-                    <strict>true</strict>
-                    <monochrome>true</monochrome>
-                    <useTestNG>false</useTestNG>
-                </configuration>
-            </execution>
-        </executions>
     </plugin>
     </plugins>
 </build>

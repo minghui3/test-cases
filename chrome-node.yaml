@@ -29,9 +29,9 @@ spec:
             - name: NODE_MAX_SESSION
               value: "5"
             resources:
-            requests:
-              memory: "1Gi"  # Minimum memory allocation
-              cpu: "500m"    # Minimum CPU allocation
-            limits:
-              memory: "2Gi"  # Maximum memory allocation
-              cpu: "1"       # Maximum CPU allocation
+              requests:
+                memory: "1Gi"  # Minimum memory allocation
+                cpu: "500m"    # Minimum CPU allocation
+              limits:
+                memory: "2Gi"  # Maximum memory allocation
+                cpu: "1"       # Maximum CPU allocation

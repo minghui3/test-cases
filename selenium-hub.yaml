@@ -32,3 +32,5 @@ spec:
           env:
             - name: GRID_MAX_SESSION
               value: "10"  # Set the maximum number of parallel sessions here
+            - name: SE_EVENT_BUS_PUBLISH_PORT
+              value: "4442"  # Hub publish port

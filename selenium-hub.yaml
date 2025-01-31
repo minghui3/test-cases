@@ -15,10 +15,12 @@ spec:
       protocol: TCP
       port: 4442
       targetPort: 4442
+      nodePort: 30442
     - name: event-bus-sub
       protocol: TCP
       port: 4443
       targetPort: 4443
+      nodePort: 30443
   type: NodePort
 ---
 apiVersion: apps/v1

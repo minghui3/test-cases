@@ -10,6 +10,7 @@ spec:
       protocol: TCP
       port: 4444
       targetPort: 4444
+      nodePort: 30444
     - name: event-bus-pub
       protocol: TCP
       port: 4442
@@ -18,6 +19,7 @@ spec:
       protocol: TCP
       port: 4443
       targetPort: 4443
+  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment

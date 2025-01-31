@@ -6,9 +6,18 @@ spec:
   selector:
     app: selenium-hub
   ports:
-    - protocol: TCP
+    - name: web-ui
+      protocol: TCP
       port: 4444
       targetPort: 4444
+    - name: event-bus-pub
+      protocol: TCP
+      port: 4442
+      targetPort: 4442
+    - name: event-bus-sub
+      protocol: TCP
+      port: 4443
+      targetPort: 4443
 ---
 apiVersion: apps/v1
 kind: Deployment

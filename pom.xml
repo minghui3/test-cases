@@ -80,11 +80,15 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>3.0.0-M5</version>
+                <version>3.2.5</version>
                 <configuration>
-                    <parallel>all</parallel> <!-- parallel execution mode -->
-                    <threadCount>4</threadCount> <!-- number of threads to run in parallel -->
-                    <useUnlimitedThreads>true</useUnlimitedThreads> <!-- Use unlimited threads for test execution -->
+                    <parallel>all</parallel> <!-- Enable parallel execution -->
+                    <threadCount>4</threadCount> <!-- Set the number of threads for parallel execution -->
+                    <properties>
+                        <configurationParameters>
+                            cucumber.junit-platform.naming-strategy=long
+                        </configurationParameters>
+                    </properties>
                 </configuration>
             </plugin>
             <plugin>

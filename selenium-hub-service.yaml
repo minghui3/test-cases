@@ -10,6 +10,7 @@ spec:
       protocol: TCP
       port: 4444
       targetPort: 4444
+      nodePort: 30000 # Optional: Expose externally
     - name: event-bus-pub
       protocol: TCP
       port: 4442
@@ -22,3 +23,4 @@ spec:
       protocol: TCP
       port: 5555
       targetPort: 5555
+  type: NodePort

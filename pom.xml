@@ -48,13 +48,6 @@
             <version>5.11.4</version> <!-- Replace with a stable version -->
             <scope>test</scope>
         </dependency>
-        <!-- JUnit Platform Console (optional, for running tests in the command line) -->
-        <dependency>
-            <groupId>org.junit.platform</groupId>
-            <artifactId>junit-platform-console</artifactId>
-            <version>5.11.4</version> <!-- Replace with a stable version -->
-            <scope>test</scope>
-        </dependency>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>

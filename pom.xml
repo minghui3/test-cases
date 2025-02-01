@@ -39,7 +39,7 @@
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-console</artifactId>
-            <version>5.11.4</version>
+            <version>5.8.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>

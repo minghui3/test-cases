@@ -19,8 +19,4 @@ spec:
       protocol: TCP
       port: 4443
       targetPort: 4443
-    - name: event-bus-5555  # Add new port for 5555
-      protocol: TCP
-      port: 5555
-      targetPort: 5555
   type: NodePort

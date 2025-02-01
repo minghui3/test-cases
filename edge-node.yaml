@@ -22,16 +22,7 @@ spec:
               value: "4442"
             - name: SE_EVENT_BUS_PUBLISH_PORT  # Add this to set the publish port
               value: "4443"  # Set an unused port for the node to publish to
-            - name: SE_EVENT_BUS_PORT
-              value: "4444"
             - name: NODE_MAX_INSTANCES
               value: "5"
             - name: NODE_MAX_SESSION
               value: "5"
-          resources:
-            requests:
-              memory: "3Gi"
-              cpu: "1"
-            limits:
-              memory: "4Gi"
-              cpu: "2"

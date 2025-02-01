@@ -22,4 +22,3 @@ spec:
       protocol: TCP
       port: 5555
       targetPort: 5555
-  type: ClusterIP

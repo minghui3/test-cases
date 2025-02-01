@@ -21,7 +21,6 @@ spec:
             - containerPort: 4444
             - containerPort: 4442
             - containerPort: 4443
-            - containerPort: 5555  # Add this line to expose port 5555
           env:
             - name: GRID_MAX_SESSION
               value: "10"  # Set the maximum number of parallel sessions here

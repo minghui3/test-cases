@@ -6,8 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import junit.framework.AssertionFailedError;
-
+// Removed: import junit.framework.AssertionFailedError;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By; 
 import org.openqa.selenium.WebDriver;
@@ -18,8 +17,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.Duration;
  
-public class LoginSteps 
-{ 
+public class LoginSteps { 
     private WebDriver driver;
 
     @Before
@@ -32,7 +30,6 @@ public class LoginSteps
         driver.get("http://localhost:3000");
     }
     
-
     @And("I fill in the email as {string}")
     public void i_fill_in_the_email_as(String email) {
         driver.findElement(By.id("email")).sendKeys(email);
@@ -46,28 +43,26 @@ public class LoginSteps
     @When("I click on the login button") 
     public void i_click_on_the_login_button() {
         driver.findElement(By.cssSelector("button")).click();
-
     }
 
     @Then("I see the alert {string}")
     public void i_see_the_alert(String message) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2)); // wait for up to 10 seconds
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
         wait.until(ExpectedConditions.alertIsPresent());
         
         String alertText = driver.switchTo().alert().getText();
-        try {
-            assertEquals(alertText, message);
-        } catch (AssertionFailedError err) {
-            err.printStackTrace();
-        }
+        // Using JUnit 5 assertion directly:
+        assertEquals(message, alertText);
     }
+
     @And("I accept the alert")
     public void i_accept_the_alert() {
         Alert alert = driver.switchTo().alert();
         alert.accept();
     }
+
     @After
-    public void closeBrowser(){
+    public void closeBrowser() {
         DriverManager.quitDriver();
     } 
 }

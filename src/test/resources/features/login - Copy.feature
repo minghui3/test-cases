@@ -2,7 +2,7 @@ Feature: Employee Login
 
 
     @d425f9a1-5909-46e4-8c5b-0e858a9ab237
-    @tag1 @tag2 a @tag3
+    @tag1 @tag2 @tag3
     Scenario: Successful login attempt
         Given I am on the login page     
         And I fill in the email as "superman@dailyplanet.com"     

@@ -1,3 +1,4 @@
+@LeaveFeature
 Feature: Apply Leave
 
     Background:
@@ -8,6 +9,7 @@ Feature: Apply Leave
         Then I see the alert "Login successful"
         And I accept the alert
 
+    @TC_003 @LeaveApplication
     Scenario: Successful leave application
         Given I am on the leave form page
         And I select "Sick Leave" as the type
@@ -17,6 +19,8 @@ Feature: Apply Leave
         And I enter "Medical checkup" as the reason
         When I click on the apply button
         Then I should see a submission confirmation
+
+    @TC_004 @LeaveApplication
     Scenario: Unsuccessful leave application
         Given I am on the leave form page
         And I select "Personal Leave" as the type

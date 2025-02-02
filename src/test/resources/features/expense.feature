@@ -1,4 +1,6 @@
+@ExpenseFeature
 Feature: Apply Expense
+
     Background:
         Given I am on the login page     
         And I fill in the email as "superman@dailyplanet.com"     
@@ -6,6 +8,8 @@ Feature: Apply Expense
         When I click on the login button     
         Then I see the alert "Login successful"
         And I accept the alert
+
+    @TC_001 @ExpenseSubmission
     Scenario: Successful expense application
         Given I am on the expense form page
         And I select "Travel" as the type
@@ -15,6 +19,8 @@ Feature: Apply Expense
         And I enter "Business Travel to Germany" as the reason
         When I click on the apply button
         Then I should see a submission confirmation
+
+    @TC_002 @ExpenseSubmission
     Scenario: Unsuccessful expense application
         Given I am on the expense form page
         And I select "Food & Drinks" as the type

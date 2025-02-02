@@ -1,7 +1,7 @@
 Feature: Employee Login
 
 
-    @cc861a1d-0b8e-4eae-baf1-8ea9816bb386
+    @46a06db7-365c-4fdb-a58d-3c9b7d6cbafb
     @tag1 @tag2 a @tag3
     Scenario: Successful login attempt
         Given I am on the login page     
@@ -11,7 +11,7 @@ Feature: Employee Login
         Then I see the alert "Login successful"
 
 
-    @0e86e5eb-5288-423a-9fee-f2e56893847f
+    @131acced-edc2-4b8e-908d-887aa35a4d0f
     @tag2 @tag4
     Scenario: Successful login attempt
         Given I am on the login page     
@@ -21,7 +21,7 @@ Feature: Employee Login
         Then I see the alert "asdasdasd"
 
 
-    @cd43fb5c-0d6e-4298-b3fe-0dff04303a93
+    @cb791f9c-b863-40fe-a86f-285f970913e5
     Scenario: Unsuccessful login attempt
         Given I am on the login page     
         And I fill in the email as "superman@as.com"     

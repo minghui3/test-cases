@@ -24,6 +24,7 @@ public class DriverManager {
         switch (browser) {
             case "chrome":
                 ChromeOptions chromeOptions = new ChromeOptions();
+                chromeOptions.addArguments("--headless","--disable-gpu");
                 driver = new ChromeDriver(chromeOptions);
                 break;
 

@@ -7,7 +7,7 @@ Feature: Apply Leave
         When I click on the login button     
         Then I see the alert "Login successful"
         And I accept the alert
-
+    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Successful leave application
         Given I am on the leave form page
         And I select "Sick Leave" as the type
@@ -17,6 +17,7 @@ Feature: Apply Leave
         And I enter "Medical checkup" as the reason
         When I click on the apply button
         Then I should see a submission confirmation
+    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Unsuccessful leave application
         Given I am on the leave form page
         And I select "Personal Leave" as the type

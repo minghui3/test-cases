@@ -6,6 +6,7 @@ Feature: Apply Expense
         When I click on the login button     
         Then I see the alert "Login successful"
         And I accept the alert
+    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Successful expense application
         Given I am on the expense form page
         And I select "Travel" as the type
@@ -15,6 +16,7 @@ Feature: Apply Expense
         And I enter "Business Travel to Germany" as the reason
         When I click on the apply button
         Then I should see a submission confirmation
+    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Unsuccessful expense application
         Given I am on the expense form page
         And I select "Food & Drinks" as the type

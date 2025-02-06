@@ -10,7 +10,6 @@ Feature: Apply Leave
 
 
     @f5c54a16-3aa7-4199-ae2a-0885d6e86345
-    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Successful leave application
         Given I am on the leave form page
         And I select "Sick Leave" as the type
@@ -23,7 +22,6 @@ Feature: Apply Leave
 
 
     @a9280879-cf02-414c-bf94-0739729941da
-    @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Unsuccessful leave application
         Given I am on the leave form page
         And I select "Personal Leave" as the type

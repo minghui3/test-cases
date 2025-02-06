@@ -8,7 +8,7 @@ Feature: Apply Expense
         And I accept the alert
 
 
-    @f9504e98-48dc-4687-8676-4cd314a59900
+    @a1362a62-dd0e-4a68-832c-1ef8de577a4a
     @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Successful expense application
         Given I am on the expense form page
@@ -21,7 +21,7 @@ Feature: Apply Expense
         Then I should see a submission confirmation
 
 
-    @bebc9219-dcc6-43b2-9b64-a1d6f9038b1f
+    @eeefcb5f-6a31-48f2-8734-32929b6fe2aa
     @c4418fe6-7713-4b3a-81e8-a9e9e8c8070e
     Scenario: Unsuccessful expense application
         Given I am on the expense form page
